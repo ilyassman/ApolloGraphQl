@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#E0E0E0"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp">
+
+            <TextView
+                android:id="@+id/accountIdText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#1A237E"
+                android:textSize="18sp"
+                android:text="Numéro de compte"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/soldeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/accountIdText"
+                android:layout_marginTop="12dp"
+                android:textColor="#4527A0"
+                android:textSize="22sp"
+                android:text="Solde"
+                android:fontFamily="sans-serif-black" />
+
+            <TextView
+                android:id="@+id/typeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/soldeText"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/type_arrondi"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="6dp"
+                android:text="Type de compte"
+                android:textColor="#512DA8"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/typeText"
+                android:layout_marginTop="8dp"
+                android:text="Date de création"
+                android:textColor="#9575CD"
+                android:textSize="14sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/deleteButton"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:icon="@drawable/ic_delete"
+                app:iconTint="#B39DDB"
+                app:iconSize="24dp"
+                app:cornerRadius="24dp" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

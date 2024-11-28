@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:padding="16dp">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addCompteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="Add account"
+        app:srcCompat="@drawable/baseline_add_24"
+        app:backgroundTint="#6200EE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/formatCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="16dp">
+
+        <RadioGroup
+            android:id="@+id/typeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:divider="@drawable/radio_divider"
+            android:showDividers="middle">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/epargneRadio"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:checked="true"
+                android:text="EPARGNE"
+                android:textSize="16sp"
+                android:paddingStart="12dp"
+                app:buttonTint="#6200EE" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/courantRadio"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="COURANT"
+                android:textSize="16sp"
+                android:paddingStart="12dp"
+                app:buttonTint="#6200EE" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/allRadio"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="TOUS"
+                android:textSize="16sp"
+                android:paddingStart="12dp"
+                app:buttonTint="#6200EE" />
+        </RadioGroup>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comptesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/formatCard"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

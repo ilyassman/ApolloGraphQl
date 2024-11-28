@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Montant"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:startIconDrawable="@drawable/baseline_attach_money_24"
+        app:endIconMode="clear_text"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxStrokeColor="#6200EE">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/soldeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="#1F1F1F"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type de compte"
+        android:textSize="16sp"
+        android:textColor="#1F1F1F"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/typeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/typeCourant"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:checked="true"
+            android:text="Compte Courant"
+            android:textSize="16sp"
+            android:paddingStart="12dp"
+            app:buttonTint="#6200EE" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/typeEpargne"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Compte Épargne"
+            android:textSize="16sp"
+            android:paddingStart="12dp"
+            app:buttonTint="#6200EE" />
+
+    </RadioGroup>
+
+</LinearLayout>
